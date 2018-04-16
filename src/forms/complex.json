@@ -1,0 +1,2121 @@
+{
+  "_id": "5750af349a617501000f248f",
+  "modified": "2016-06-16T21:59:48.119Z",
+  "title": "*Labs",
+  "display": "form",
+  "type": "form",
+  "name": "labs",
+  "path": "labs",
+  "project": "5716984b23ae270100b94fcb",
+  "created": "2016-06-02T22:12:04.147Z",
+  "components": [
+    {
+      "input": false,
+      "title": "In Home Screening- triggered by client data",
+      "theme": "primary",
+      "components": [
+        {
+          "input": false,
+          "numRows": 4,
+          "numCols": 2,
+          "rows": [
+            [
+              {
+                "components": [
+                  {
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": false
+                    },
+                    "type": "radio",
+                    "validate": {
+                      "customPrivate": false,
+                      "custom": "",
+                      "required": true
+                    },
+                    "persistent": true,
+                    "protected": false,
+                    "defaultValue": "",
+                    "values": [
+                      {
+                        "label": "Yes",
+                        "value": "Y"
+                      },
+                      {
+                        "label": "No",
+                        "value": "N"
+                      }
+                    ],
+                    "key": "urineMicroalbuminPerformed",
+                    "label": "Urine Microalbumin Performed?",
+                    "inputType": "radio",
+                    "tableView": true,
+                    "input": true
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "conditional": {
+                      "eq": "N",
+                      "when": "urineMicroalbuminPerformed",
+                      "show": "true"
+                    },
+                    "type": "select",
+                    "validate": {
+                      "required": false
+                    },
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "multiple": false,
+                    "template": "<span>{{ item.label }}</span>",
+                    "authenticate": false,
+                    "filter": "",
+                    "refreshOn": "",
+                    "defaultValue": "",
+                    "valueProperty": "",
+                    "dataSrc": "values",
+                    "data": {
+                      "resource": "",
+                      "url": "",
+                      "json": "",
+                      "values": [
+                        {
+                          "label": "Test",
+                          "value": "test"
+                        }
+                      ]
+                    },
+                    "placeholder": "If No then display this field Current Edc values",
+                    "key": "reason",
+                    "label": "Reason",
+                    "tableView": true,
+                    "input": true
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": false
+                    },
+                    "type": "radio",
+                    "validate": {
+                      "customPrivate": false,
+                      "custom": "",
+                      "required": true
+                    },
+                    "persistent": true,
+                    "protected": false,
+                    "defaultValue": "",
+                    "values": [
+                      {
+                        "label": "Yes",
+                        "value": "Y"
+                      },
+                      {
+                        "label": "No",
+                        "value": "N"
+                      }
+                    ],
+                    "key": "fitKitDelivered",
+                    "label": "FIT Kit Delivered?",
+                    "inputType": "radio",
+                    "tableView": true,
+                    "input": true,
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "conditional": {
+                      "eq": "N",
+                      "when": "fitKitDelivered",
+                      "show": "true"
+                    },
+                    "type": "select",
+                    "validate": {
+                      "required": false
+                    },
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "multiple": false,
+                    "template": "<span>{{ item.label }}</span>",
+                    "authenticate": false,
+                    "filter": "",
+                    "refreshOn": "",
+                    "defaultValue": "",
+                    "valueProperty": "",
+                    "dataSrc": "values",
+                    "data": {
+                      "resource": "",
+                      "url": "",
+                      "json": "",
+                      "values": [
+                        {
+                          "label": "",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    "placeholder": "",
+                    "key": "reason2",
+                    "label": "Reason",
+                    "tableView": true,
+                    "input": true
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": false
+                    },
+                    "type": "radio",
+                    "validate": {
+                      "customPrivate": false,
+                      "custom": "",
+                      "required": true
+                    },
+                    "persistent": true,
+                    "protected": false,
+                    "defaultValue": "",
+                    "values": [
+                      {
+                        "label": "Yes",
+                        "value": "Y"
+                      },
+                      {
+                        "label": "No",
+                        "value": "N"
+                      }
+                    ],
+                    "key": "hbA1CPerformed",
+                    "label": "HbA1c Performed?",
+                    "inputType": "radio",
+                    "tableView": true,
+                    "input": true,
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "conditional": {
+                      "eq": "N",
+                      "when": "hbA1CPerformed",
+                      "show": "true"
+                    },
+                    "type": "select",
+                    "validate": {
+                      "required": false
+                    },
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "multiple": false,
+                    "template": "<span>{{ item.label }}</span>",
+                    "authenticate": false,
+                    "filter": "",
+                    "refreshOn": "",
+                    "defaultValue": "",
+                    "valueProperty": "",
+                    "dataSrc": "values",
+                    "data": {
+                      "resource": "",
+                      "url": "",
+                      "json": "",
+                      "values": [
+                        {
+                          "label": "",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    "placeholder": "current EDC values",
+                    "key": "reason3",
+                    "label": "Reason",
+                    "tableView": true,
+                    "input": true
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": false
+                    },
+                    "type": "radio",
+                    "validate": {
+                      "customPrivate": false,
+                      "custom": "",
+                      "required": true
+                    },
+                    "persistent": true,
+                    "protected": false,
+                    "defaultValue": "",
+                    "values": [
+                      {
+                        "label": "Yes",
+                        "value": "Y"
+                      },
+                      {
+                        "label": "No",
+                        "value": "N"
+                      }
+                    ],
+                    "key": "padTestingPerformed",
+                    "label": "PAD Testing Performed?",
+                    "inputType": "radio",
+                    "tableView": true,
+                    "input": true,
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "conditional": {
+                      "eq": "Y",
+                      "when": "padTestingPerformed",
+                      "show": "true"
+                    },
+                    "type": "select",
+                    "validate": {
+                      "required": false
+                    },
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "multiple": false,
+                    "template": "<span>{{ item.label }}</span>",
+                    "authenticate": false,
+                    "filter": "",
+                    "refreshOn": "",
+                    "defaultValue": "",
+                    "valueProperty": "",
+                    "dataSrc": "values",
+                    "data": {
+                      "resource": "",
+                      "url": "",
+                      "json": "",
+                      "values": [
+                        {
+                          "label": "Smoking",
+                          "value": "Smoking"
+                        },
+                        {
+                          "label": "Decreased Pulses",
+                          "value": "Decreased Pulses"
+                        },
+                        {
+                          "label": "Other Cardiovascular Disease",
+                          "value": "Other Cardiovascular Disease"
+                        },
+                        {
+                          "label": "Thin Skin, Hair Loss, Cool Lower Extremeties",
+                          "value": "Thin Skin, Hair Loss, Cool Lower Extremeties"
+                        }
+                      ]
+                    },
+                    "placeholder": "",
+                    "key": "why",
+                    "label": "Why",
+                    "tableView": true,
+                    "input": true
+                  }
+                ]
+              }
+            ]
+          ],
+          "header": [],
+          "caption": "",
+          "striped": true,
+          "bordered": false,
+          "hover": false,
+          "condensed": false,
+          "type": "table",
+          "conditional": {
+            "show": "false",
+            "when": "noLabsDiagnosticAvailable",
+            "eq": "true"
+          }
+        }
+      ],
+      "type": "panel",
+      "conditional": {
+        "show": null,
+        "when": null,
+        "eq": ""
+      }
+    },
+    {
+      "input": false,
+      "title": "Lab Results",
+      "theme": "primary",
+      "components": [
+        {
+          "input": false,
+          "numRows": 1,
+          "numCols": 2,
+          "rows": [
+            [
+              {
+                "components": [
+                  {
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": false
+                    },
+                    "type": "checkbox",
+                    "validate": {
+                      "required": false
+                    },
+                    "persistent": true,
+                    "protected": false,
+                    "defaultValue": false,
+                    "key": "noLabsDiagnosticAvailable",
+                    "label": "No Labs/Diagnostic Available",
+                    "hideLabel": true,
+                    "tableView": true,
+                    "inputType": "checkbox",
+                    "input": true,
+                    "isNew": false
+                  },
+                  {
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": null
+                    },
+                    "type": "datetime",
+                    "validate": {
+                      "custom": "",
+                      "required": false
+                    },
+                    "persistent": true,
+                    "protected": false,
+                    "timePicker": {
+                      "arrowkeys": true,
+                      "mousewheel": true,
+                      "readonlyInput": false,
+                      "showMeridian": true,
+                      "minuteStep": 1,
+                      "hourStep": 1
+                    },
+                    "datePicker": {
+                      "datepickerMode": "day",
+                      "yearRange": "20",
+                      "maxMode": "year",
+                      "minMode": "day",
+                      "initDate": "",
+                      "startingDay": 0,
+                      "showWeeks": true
+                    },
+                    "datepickerMode": "day",
+                    "enableTime": true,
+                    "enableDate": true,
+                    "format": "yyyy-MM-dd HH:mm",
+                    "placeholder": "only show this if Diabetes is yes on Health History",
+                    "key": "fastingBloodGlucoseselfmonitoringDate",
+                    "label": "Fasting Blood Glucose (self monitoring) Date",
+                    "tableView": true,
+                    "input": true
+                  },
+                  {
+                    "isNew": false,
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": false
+                    },
+                    "type": "checkbox",
+                    "validate": {
+                      "required": false
+                    },
+                    "persistent": true,
+                    "protected": false,
+                    "defaultValue": false,
+                    "key": "high",
+                    "label": "High",
+                    "hideLabel": true,
+                    "tableView": true,
+                    "inputType": "checkbox",
+                    "input": true
+                  },
+                  {
+                    "type": "textfield",
+                    "conditional": {
+                      "eq": "true",
+                      "when": "high",
+                      "show": "true"
+                    },
+                    "validate": {
+                      "customPrivate": false,
+                      "custom": "",
+                      "pattern": "",
+                      "maxLength": "",
+                      "minLength": "",
+                      "required": false
+                    },
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "defaultValue": "",
+                    "multiple": false,
+                    "suffix": "",
+                    "prefix": "",
+                    "placeholder": "",
+                    "key": "comments",
+                    "label": "Comments",
+                    "inputMask": "",
+                    "inputType": "text",
+                    "tableView": true,
+                    "input": true
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "customError": "No more than 3 digits",
+                    "input": true,
+                    "tableView": true,
+                    "inputType": "number",
+                    "label": "Range last 7-14 days- Low",
+                    "key": "rangelast714DaysLow",
+                    "placeholder": "3 numeric digits",
+                    "prefix": "",
+                    "suffix": "",
+                    "defaultValue": 0,
+                    "protected": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "min": "",
+                      "max": "",
+                      "step": "any",
+                      "integer": "",
+                      "multiple": "",
+                      "custom": "if(input.length <= 3)\n{\nvalid = true\n}\nelse\n{\nvalid = 'No more than 3 digits';\n}"
+                    },
+                    "type": "number",
+                    "conditional": {
+                      "show": "true",
+                      "when": "fastingBloodGlucoseSelfMonitoring",
+                      "eq": "true"
+                    }
+                  },
+                  {
+                    "type": "textfield",
+                    "conditional": {
+                      "eq": "Y",
+                      "when": "fastingBloodGlucoseSelfMonitoring",
+                      "show": "true"
+                    },
+                    "validate": {
+                      "customPrivate": false,
+                      "custom": "",
+                      "pattern": "",
+                      "maxLength": "",
+                      "minLength": "",
+                      "required": false
+                    },
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "defaultValue": "",
+                    "multiple": false,
+                    "suffix": "",
+                    "prefix": "",
+                    "placeholder": "3 numeric digits",
+                    "key": "rangeLast714DaysHigh",
+                    "label": "Range Last 7-14 days- High",
+                    "inputMask": "",
+                    "inputType": "text",
+                    "tableView": true,
+                    "input": true
+                  },
+                  {
+                    "type": "textfield",
+                    "conditional": {
+                      "eq": "Y",
+                      "when": "fastingBloodGlucoseSelfMonitoring",
+                      "show": "true"
+                    },
+                    "validate": {
+                      "customPrivate": false,
+                      "custom": "",
+                      "pattern": "",
+                      "maxLength": "",
+                      "minLength": "",
+                      "required": false
+                    },
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "defaultValue": "",
+                    "multiple": false,
+                    "suffix": "",
+                    "prefix": "",
+                    "placeholder": "",
+                    "key": "date",
+                    "label": "Date",
+                    "inputMask": "",
+                    "inputType": "text",
+                    "tableView": true,
+                    "input": true
+                  }
+                ]
+              }
+            ]
+          ],
+          "header": [],
+          "caption": "",
+          "striped": false,
+          "bordered": false,
+          "hover": false,
+          "condensed": false,
+          "type": "table",
+          "conditional": {
+            "show": "false",
+            "when": "noLabsDiagnosticAvailable",
+            "eq": "true"
+          }
+        },
+        {
+          "input": false,
+          "numRows": 15,
+          "numCols": 2,
+          "rows": [
+            [
+              {
+                "components": [
+                  {
+                    "input": true,
+                    "tableView": true,
+                    "label": "Fasting Blood Glucose (Lab) Date",
+                    "key": "fastingBloodGlucoseLabDate",
+                    "placeholder": "free form date entry do no display calendar",
+                    "format": "mmddyyyy",
+                    "enableDate": true,
+                    "enableTime": true,
+                    "datepickerMode": "day",
+                    "datePicker": {
+                      "showWeeks": true,
+                      "startingDay": 0,
+                      "initDate": "",
+                      "minMode": "day",
+                      "maxMode": "year",
+                      "yearRange": "20",
+                      "datepickerMode": "day"
+                    },
+                    "timePicker": {
+                      "hourStep": 1,
+                      "minuteStep": 1,
+                      "showMeridian": true,
+                      "readonlyInput": false,
+                      "mousewheel": true,
+                      "arrowkeys": true
+                    },
+                    "protected": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "custom": ""
+                    },
+                    "type": "datetime",
+                    "conditional": {
+                      "show": false,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "isNew": false,
+                    "lockKey": true
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "input": true,
+                    "tableView": true,
+                    "inputType": "text",
+                    "inputMask": "",
+                    "label": "Fasting Blood Glucose (Lab)Result",
+                    "key": "fastingBloodGlucoseLabResult",
+                    "placeholder": "If date is populated then result can be added up to 3 numeric digits",
+                    "prefix": "",
+                    "suffix": "",
+                    "multiple": false,
+                    "defaultValue": "",
+                    "protected": false,
+                    "unique": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "minLength": "",
+                      "maxLength": "",
+                      "pattern": "",
+                      "custom": "",
+                      "customPrivate": false
+                    },
+                    "conditional": {
+                      "show": null,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "type": "textfield",
+                    "customConditional": "show = data['fastingBloodGlucoseLabDate'] > 1"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "lockKey": true,
+                    "input": true,
+                    "tableView": true,
+                    "label": "HbA1c Date",
+                    "key": "hbA1CDate",
+                    "placeholder": "free form entry of date, do not display calendar",
+                    "format": "mmddyyy",
+                    "enableDate": true,
+                    "enableTime": true,
+                    "datepickerMode": "day",
+                    "datePicker": {
+                      "showWeeks": true,
+                      "startingDay": 0,
+                      "initDate": "",
+                      "minMode": "day",
+                      "maxMode": "year",
+                      "yearRange": "20",
+                      "datepickerMode": "day"
+                    },
+                    "timePicker": {
+                      "hourStep": 1,
+                      "minuteStep": 1,
+                      "showMeridian": true,
+                      "readonlyInput": false,
+                      "mousewheel": true,
+                      "arrowkeys": true
+                    },
+                    "protected": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "custom": ""
+                    },
+                    "type": "datetime",
+                    "conditional": {
+                      "show": false,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "customConditional": "show = data['hbA1CDate'] > 1",
+                    "input": true,
+                    "tableView": true,
+                    "inputType": "text",
+                    "inputMask": "",
+                    "label": "HbA1c Result",
+                    "key": "hbA1CResult",
+                    "placeholder": "If date is populated then display this field 4 characters including decimal",
+                    "prefix": "",
+                    "suffix": "",
+                    "multiple": false,
+                    "defaultValue": "",
+                    "protected": false,
+                    "unique": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "minLength": "",
+                      "maxLength": "",
+                      "pattern": "",
+                      "custom": "",
+                      "customPrivate": false
+                    },
+                    "conditional": {
+                      "show": null,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "type": "textfield"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": null
+                    },
+                    "type": "datetime",
+                    "validate": {
+                      "custom": "",
+                      "required": false
+                    },
+                    "persistent": true,
+                    "protected": false,
+                    "timePicker": {
+                      "arrowkeys": true,
+                      "mousewheel": true,
+                      "readonlyInput": false,
+                      "showMeridian": true,
+                      "minuteStep": 1,
+                      "hourStep": 1
+                    },
+                    "datePicker": {
+                      "datepickerMode": "day",
+                      "yearRange": "20",
+                      "maxMode": "year",
+                      "minMode": "day",
+                      "initDate": "",
+                      "startingDay": 0,
+                      "showWeeks": true
+                    },
+                    "datepickerMode": "day",
+                    "enableTime": true,
+                    "enableDate": true,
+                    "format": "yyyy-MM-dd HH:mm",
+                    "placeholder": "partial date is fine",
+                    "key": "urineforAlbumin",
+                    "label": "Urine for Albumin",
+                    "tableView": true,
+                    "input": true
+                  },
+                  {
+                    "lockKey": true,
+                    "input": true,
+                    "tableView": true,
+                    "label": "Urine for Protein Date",
+                    "key": "urineforProteinDate",
+                    "placeholder": "free form date entry- do not display calendar option",
+                    "format": "mmddyyyy",
+                    "enableDate": true,
+                    "enableTime": true,
+                    "datepickerMode": "day",
+                    "datePicker": {
+                      "showWeeks": true,
+                      "startingDay": 0,
+                      "initDate": "",
+                      "minMode": "day",
+                      "maxMode": "year",
+                      "yearRange": "20",
+                      "datepickerMode": "day"
+                    },
+                    "timePicker": {
+                      "hourStep": 1,
+                      "minuteStep": 1,
+                      "showMeridian": true,
+                      "readonlyInput": false,
+                      "mousewheel": true,
+                      "arrowkeys": true
+                    },
+                    "protected": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "custom": ""
+                    },
+                    "type": "datetime",
+                    "conditional": {
+                      "show": false,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "type": "textfield",
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": null
+                    },
+                    "validate": {
+                      "customPrivate": false,
+                      "custom": "",
+                      "pattern": "",
+                      "maxLength": "",
+                      "minLength": "",
+                      "required": false
+                    },
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "defaultValue": "",
+                    "multiple": false,
+                    "suffix": "",
+                    "prefix": "",
+                    "placeholder": "up to 5 numeric digits",
+                    "key": "urineforAlbuminResult",
+                    "label": "Urine for Albumin Result",
+                    "inputMask": "",
+                    "inputType": "text",
+                    "tableView": true,
+                    "input": true
+                  },
+                  {
+                    "customConditional": "show = data['urineforProteinDate'] > 1",
+                    "input": true,
+                    "tableView": true,
+                    "inputType": "text",
+                    "inputMask": "",
+                    "label": "Urine for Protein Result",
+                    "key": "urineforProteinResult",
+                    "placeholder": "If date is populated then display this field up to 3 numeric digits",
+                    "prefix": "",
+                    "suffix": "",
+                    "multiple": false,
+                    "defaultValue": "",
+                    "protected": false,
+                    "unique": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "minLength": "",
+                      "maxLength": "",
+                      "pattern": "",
+                      "custom": "",
+                      "customPrivate": false
+                    },
+                    "conditional": {
+                      "show": null,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "type": "textfield"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "lockKey": true,
+                    "input": true,
+                    "tableView": true,
+                    "label": "Cholesterol/LDL-C Date",
+                    "key": "cholesterolLdlCDate",
+                    "placeholder": "free form date entry do not display calendar",
+                    "format": "mmddyyyy",
+                    "enableDate": true,
+                    "enableTime": true,
+                    "datepickerMode": "day",
+                    "datePicker": {
+                      "showWeeks": true,
+                      "startingDay": 0,
+                      "initDate": "",
+                      "minMode": "day",
+                      "maxMode": "year",
+                      "yearRange": "20",
+                      "datepickerMode": "day"
+                    },
+                    "timePicker": {
+                      "hourStep": 1,
+                      "minuteStep": 1,
+                      "showMeridian": true,
+                      "readonlyInput": false,
+                      "mousewheel": true,
+                      "arrowkeys": true
+                    },
+                    "protected": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "custom": ""
+                    },
+                    "type": "datetime",
+                    "conditional": {
+                      "show": false,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "customConditional": "show = data['cholesterolLdlCDate'] > 1",
+                    "input": true,
+                    "tableView": true,
+                    "inputType": "text",
+                    "inputMask": "",
+                    "label": "Cholesterol/ LDL-C Result",
+                    "key": "cholesterolLdlCResult",
+                    "placeholder": "If date is populated then display this field up to 4 numeric digits",
+                    "prefix": "",
+                    "suffix": "",
+                    "multiple": false,
+                    "defaultValue": "",
+                    "protected": false,
+                    "unique": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "minLength": "",
+                      "maxLength": "",
+                      "pattern": "",
+                      "custom": "",
+                      "customPrivate": false
+                    },
+                    "conditional": {
+                      "show": null,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "type": "textfield"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "lockKey": true,
+                    "input": true,
+                    "tableView": true,
+                    "label": "BUN Date",
+                    "key": "bunDate",
+                    "placeholder": "free form date entry- do not display calendar",
+                    "format": "mmddyyyy",
+                    "enableDate": true,
+                    "enableTime": true,
+                    "datepickerMode": "day",
+                    "datePicker": {
+                      "showWeeks": true,
+                      "startingDay": 0,
+                      "initDate": "",
+                      "minMode": "day",
+                      "maxMode": "year",
+                      "yearRange": "20",
+                      "datepickerMode": "day"
+                    },
+                    "timePicker": {
+                      "hourStep": 1,
+                      "minuteStep": 1,
+                      "showMeridian": true,
+                      "readonlyInput": false,
+                      "mousewheel": true,
+                      "arrowkeys": true
+                    },
+                    "protected": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "custom": ""
+                    },
+                    "type": "datetime",
+                    "conditional": {
+                      "show": false,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "customConditional": "show = data['bunDate'] > 1",
+                    "input": true,
+                    "tableView": true,
+                    "inputType": "text",
+                    "inputMask": "",
+                    "label": "BUN Result",
+                    "key": "bunResult",
+                    "placeholder": "If date is populated then display this field up to 3 numeric digits",
+                    "prefix": "",
+                    "suffix": "",
+                    "multiple": false,
+                    "defaultValue": "",
+                    "protected": false,
+                    "unique": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "minLength": "",
+                      "maxLength": "",
+                      "pattern": "",
+                      "custom": "",
+                      "customPrivate": false
+                    },
+                    "conditional": {
+                      "show": null,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "type": "textfield"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "lockKey": true,
+                    "input": true,
+                    "tableView": true,
+                    "label": "Creatinine Date",
+                    "key": "creatinineDate",
+                    "placeholder": "free form date entry- do not display calendar",
+                    "format": "mmddyyyy",
+                    "enableDate": true,
+                    "enableTime": true,
+                    "datepickerMode": "day",
+                    "datePicker": {
+                      "showWeeks": true,
+                      "startingDay": 0,
+                      "initDate": "",
+                      "minMode": "day",
+                      "maxMode": "year",
+                      "yearRange": "20",
+                      "datepickerMode": "day"
+                    },
+                    "timePicker": {
+                      "hourStep": 1,
+                      "minuteStep": 1,
+                      "showMeridian": true,
+                      "readonlyInput": false,
+                      "mousewheel": true,
+                      "arrowkeys": true
+                    },
+                    "protected": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "custom": ""
+                    },
+                    "type": "datetime",
+                    "conditional": {
+                      "show": false,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "customConditional": "show = data['creatinineDate'] > 1",
+                    "input": true,
+                    "tableView": true,
+                    "inputType": "text",
+                    "inputMask": "",
+                    "label": "Creatinine Result",
+                    "key": "creatinineResult",
+                    "placeholder": "If date is populated then display this field up to 4 characters including decimal",
+                    "prefix": "",
+                    "suffix": "",
+                    "multiple": false,
+                    "defaultValue": "",
+                    "protected": false,
+                    "unique": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "minLength": "",
+                      "maxLength": "",
+                      "pattern": "",
+                      "custom": "",
+                      "customPrivate": false
+                    },
+                    "conditional": {
+                      "show": null,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "type": "textfield"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "lockKey": true,
+                    "input": true,
+                    "tableView": true,
+                    "label": "K Date",
+                    "key": "kDate",
+                    "placeholder": "Free form date entry- do not display calendar",
+                    "format": "mmddyyyy",
+                    "enableDate": true,
+                    "enableTime": true,
+                    "datepickerMode": "day",
+                    "datePicker": {
+                      "showWeeks": true,
+                      "startingDay": 0,
+                      "initDate": "",
+                      "minMode": "day",
+                      "maxMode": "year",
+                      "yearRange": "20",
+                      "datepickerMode": "day"
+                    },
+                    "timePicker": {
+                      "hourStep": 1,
+                      "minuteStep": 1,
+                      "showMeridian": true,
+                      "readonlyInput": false,
+                      "mousewheel": true,
+                      "arrowkeys": true
+                    },
+                    "protected": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "custom": ""
+                    },
+                    "type": "datetime",
+                    "conditional": {
+                      "show": false,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "customConditional": "show = data['kDate'] > 1",
+                    "input": true,
+                    "tableView": true,
+                    "inputType": "text",
+                    "inputMask": "",
+                    "label": "K Result",
+                    "key": "kResult",
+                    "placeholder": "If date is populated then display this field up to 3 characters including decimal",
+                    "prefix": "",
+                    "suffix": "",
+                    "multiple": false,
+                    "defaultValue": "",
+                    "protected": false,
+                    "unique": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "minLength": "",
+                      "maxLength": "",
+                      "pattern": "",
+                      "custom": "",
+                      "customPrivate": false
+                    },
+                    "conditional": {
+                      "show": null,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "type": "textfield"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "lockKey": true,
+                    "input": true,
+                    "tableView": true,
+                    "label": "Estimated GFR Date",
+                    "key": "estimatedGfrDate",
+                    "placeholder": "Free form date entry- do not display calendar",
+                    "format": "mmddyyyy",
+                    "enableDate": true,
+                    "enableTime": true,
+                    "datepickerMode": "day",
+                    "datePicker": {
+                      "showWeeks": true,
+                      "startingDay": 0,
+                      "initDate": "",
+                      "minMode": "day",
+                      "maxMode": "year",
+                      "yearRange": "20",
+                      "datepickerMode": "day"
+                    },
+                    "timePicker": {
+                      "hourStep": 1,
+                      "minuteStep": 1,
+                      "showMeridian": true,
+                      "readonlyInput": false,
+                      "mousewheel": true,
+                      "arrowkeys": true
+                    },
+                    "protected": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "custom": ""
+                    },
+                    "type": "datetime",
+                    "conditional": {
+                      "show": false,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "customConditional": "show = data['estimatedGfrDate'] > 1",
+                    "input": true,
+                    "inputType": "checkbox",
+                    "tableView": true,
+                    "hideLabel": true,
+                    "label": "Result >60",
+                    "key": "result60",
+                    "defaultValue": false,
+                    "protected": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false
+                    },
+                    "type": "checkbox",
+                    "conditional": {
+                      "show": null,
+                      "when": null,
+                      "eq": ""
+                    }
+                  },
+                  {
+                    "customConditional": "show = data['estimatedGfrDate'] > 1",
+                    "input": true,
+                    "tableView": true,
+                    "inputType": "text",
+                    "inputMask": "",
+                    "label": "Estimated GFR Result",
+                    "key": "estimatedGfrResult",
+                    "placeholder": "If date is populated then display check box and this field",
+                    "prefix": "",
+                    "suffix": "",
+                    "multiple": false,
+                    "defaultValue": "",
+                    "protected": false,
+                    "unique": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "minLength": "",
+                      "maxLength": "",
+                      "pattern": "",
+                      "custom": "",
+                      "customPrivate": false
+                    },
+                    "conditional": {
+                      "show": null,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "type": "textfield"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "lockKey": true,
+                    "input": true,
+                    "tableView": true,
+                    "label": "Estimated GFR 2 Date",
+                    "key": "estimatedGfr2Date",
+                    "placeholder": "Free form date entry- do not display date calendar",
+                    "format": "mmddyyyy",
+                    "enableDate": true,
+                    "enableTime": true,
+                    "datepickerMode": "day",
+                    "datePicker": {
+                      "showWeeks": true,
+                      "startingDay": 0,
+                      "initDate": "",
+                      "minMode": "day",
+                      "maxMode": "year",
+                      "yearRange": "20",
+                      "datepickerMode": "day"
+                    },
+                    "timePicker": {
+                      "hourStep": 1,
+                      "minuteStep": 1,
+                      "showMeridian": true,
+                      "readonlyInput": false,
+                      "mousewheel": true,
+                      "arrowkeys": true
+                    },
+                    "protected": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "custom": ""
+                    },
+                    "type": "datetime",
+                    "conditional": {
+                      "show": false,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "customConditional": "show = data['estimatedGfr2Date'] > 1",
+                    "input": true,
+                    "inputType": "checkbox",
+                    "tableView": true,
+                    "hideLabel": true,
+                    "label": "Result 2 >60",
+                    "key": "result260",
+                    "defaultValue": false,
+                    "protected": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false
+                    },
+                    "type": "checkbox",
+                    "conditional": {
+                      "show": null,
+                      "when": null,
+                      "eq": ""
+                    }
+                  },
+                  {
+                    "customConditional": "show = data['estimatedGfr2Date'] > 1",
+                    "input": true,
+                    "tableView": true,
+                    "inputType": "text",
+                    "inputMask": "",
+                    "label": "Estimated GFR 2 Result",
+                    "key": "estimatedGfr2Result",
+                    "placeholder": "If date is populated display >60 field and this field",
+                    "prefix": "",
+                    "suffix": "",
+                    "multiple": false,
+                    "defaultValue": "",
+                    "protected": false,
+                    "unique": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "minLength": "",
+                      "maxLength": "",
+                      "pattern": "",
+                      "custom": "",
+                      "customPrivate": false
+                    },
+                    "conditional": {
+                      "show": null,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "type": "textfield"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "lockKey": true,
+                    "input": true,
+                    "tableView": true,
+                    "label": "Serum Albumin Date",
+                    "key": "serumAlbuminDate",
+                    "placeholder": "Free form date entry- do not display calendar",
+                    "format": "mmddyyyy",
+                    "enableDate": true,
+                    "enableTime": true,
+                    "datepickerMode": "day",
+                    "datePicker": {
+                      "showWeeks": true,
+                      "startingDay": 0,
+                      "initDate": "",
+                      "minMode": "day",
+                      "maxMode": "year",
+                      "yearRange": "20",
+                      "datepickerMode": "day"
+                    },
+                    "timePicker": {
+                      "hourStep": 1,
+                      "minuteStep": 1,
+                      "showMeridian": true,
+                      "readonlyInput": false,
+                      "mousewheel": true,
+                      "arrowkeys": true
+                    },
+                    "protected": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "custom": ""
+                    },
+                    "type": "datetime",
+                    "conditional": {
+                      "show": false,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "customConditional": "show = data['serumAlbuminDate'] > 1",
+                    "type": "textfield",
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": null
+                    },
+                    "validate": {
+                      "customPrivate": false,
+                      "custom": "",
+                      "pattern": "",
+                      "maxLength": "",
+                      "minLength": "",
+                      "required": false
+                    },
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "defaultValue": "",
+                    "multiple": false,
+                    "suffix": "",
+                    "prefix": "",
+                    "placeholder": "If date is populated display this field up to 3 numeric digits",
+                    "key": "serumAlbuminResult",
+                    "label": "Serum Albumin Result",
+                    "inputMask": "",
+                    "inputType": "text",
+                    "tableView": true,
+                    "input": true
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "lockKey": true,
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": false
+                    },
+                    "type": "datetime",
+                    "validate": {
+                      "custom": "",
+                      "required": false
+                    },
+                    "persistent": true,
+                    "protected": false,
+                    "timePicker": {
+                      "arrowkeys": true,
+                      "mousewheel": true,
+                      "readonlyInput": false,
+                      "showMeridian": true,
+                      "minuteStep": 1,
+                      "hourStep": 1
+                    },
+                    "datePicker": {
+                      "datepickerMode": "day",
+                      "yearRange": "20",
+                      "maxMode": "year",
+                      "minMode": "day",
+                      "initDate": "",
+                      "startingDay": 0,
+                      "showWeeks": true
+                    },
+                    "datepickerMode": "day",
+                    "enableTime": true,
+                    "enableDate": true,
+                    "format": "mmddyyyy",
+                    "placeholder": "Free form date entry- do not display calendar",
+                    "key": "hgbDate",
+                    "label": "HGB Date",
+                    "tableView": true,
+                    "input": true,
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "customConditional": "show = data['hgbDate'] > 1",
+                    "type": "textfield",
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": null
+                    },
+                    "validate": {
+                      "customPrivate": false,
+                      "custom": "",
+                      "pattern": "",
+                      "maxLength": "",
+                      "minLength": "",
+                      "required": false
+                    },
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "defaultValue": "",
+                    "multiple": false,
+                    "suffix": "",
+                    "prefix": "",
+                    "placeholder": "If date is populated then display this field up to 4 characters including decimal",
+                    "key": "hgbResult",
+                    "label": "HGB Result",
+                    "inputMask": "",
+                    "inputType": "text",
+                    "tableView": true,
+                    "input": true
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "lockKey": true,
+                    "input": true,
+                    "tableView": true,
+                    "label": "HCT Date",
+                    "key": "hctDate",
+                    "placeholder": "free form date entry- do not display calendar",
+                    "format": "mmddyyyy",
+                    "enableDate": true,
+                    "enableTime": true,
+                    "datepickerMode": "day",
+                    "datePicker": {
+                      "showWeeks": true,
+                      "startingDay": 0,
+                      "initDate": "",
+                      "minMode": "day",
+                      "maxMode": "year",
+                      "yearRange": "20",
+                      "datepickerMode": "day"
+                    },
+                    "timePicker": {
+                      "hourStep": 1,
+                      "minuteStep": 1,
+                      "showMeridian": true,
+                      "readonlyInput": false,
+                      "mousewheel": true,
+                      "arrowkeys": true
+                    },
+                    "protected": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "custom": ""
+                    },
+                    "type": "datetime",
+                    "conditional": {
+                      "show": false,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "customConditional": "show = data['hctDate'] > 1",
+                    "input": true,
+                    "tableView": true,
+                    "inputType": "text",
+                    "inputMask": "",
+                    "label": "HCT Result",
+                    "key": "hctResult",
+                    "placeholder": "If date is populated then display this field up to 4 characters including decimal",
+                    "prefix": "",
+                    "suffix": "",
+                    "multiple": false,
+                    "defaultValue": "",
+                    "protected": false,
+                    "unique": false,
+                    "persistent": true,
+                    "validate": {
+                      "required": false,
+                      "minLength": "",
+                      "maxLength": "",
+                      "pattern": "",
+                      "custom": "",
+                      "customPrivate": false
+                    },
+                    "conditional": {
+                      "show": null,
+                      "when": null,
+                      "eq": ""
+                    },
+                    "type": "textfield"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "lockKey": true,
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": false
+                    },
+                    "type": "datetime",
+                    "validate": {
+                      "custom": "",
+                      "required": false
+                    },
+                    "persistent": true,
+                    "protected": false,
+                    "timePicker": {
+                      "arrowkeys": true,
+                      "mousewheel": true,
+                      "readonlyInput": false,
+                      "showMeridian": true,
+                      "minuteStep": 1,
+                      "hourStep": 1
+                    },
+                    "datePicker": {
+                      "datepickerMode": "day",
+                      "yearRange": "20",
+                      "maxMode": "year",
+                      "minMode": "day",
+                      "initDate": "",
+                      "startingDay": 0,
+                      "showWeeks": true
+                    },
+                    "datepickerMode": "day",
+                    "enableTime": true,
+                    "enableDate": true,
+                    "format": "mmddyyyy",
+                    "placeholder": "free form date entry - do not display calendar",
+                    "key": "wbcDate",
+                    "label": "WBC Date",
+                    "tableView": true,
+                    "input": true,
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "customConditional": "show = data['wbcDate'] > 1",
+                    "type": "textfield",
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": null
+                    },
+                    "validate": {
+                      "customPrivate": false,
+                      "custom": "",
+                      "pattern": "",
+                      "maxLength": "",
+                      "minLength": "",
+                      "required": false
+                    },
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "defaultValue": "",
+                    "multiple": false,
+                    "suffix": "",
+                    "prefix": "",
+                    "placeholder": "If date is populated then display this field up to 4 characters including decimal",
+                    "key": "wbcResult",
+                    "label": "WBC Result",
+                    "inputMask": "",
+                    "inputType": "text",
+                    "tableView": true,
+                    "input": true
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "lockKey": true,
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": false
+                    },
+                    "type": "datetime",
+                    "validate": {
+                      "custom": "",
+                      "required": false
+                    },
+                    "persistent": true,
+                    "protected": false,
+                    "timePicker": {
+                      "arrowkeys": true,
+                      "mousewheel": true,
+                      "readonlyInput": false,
+                      "showMeridian": true,
+                      "minuteStep": 1,
+                      "hourStep": 1
+                    },
+                    "datePicker": {
+                      "datepickerMode": "day",
+                      "yearRange": "20",
+                      "maxMode": "year",
+                      "minMode": "day",
+                      "initDate": "",
+                      "startingDay": 0,
+                      "showWeeks": true
+                    },
+                    "datepickerMode": "day",
+                    "enableTime": true,
+                    "enableDate": true,
+                    "format": "mmddyyyy",
+                    "placeholder": "Free form date entry- do not display calendar",
+                    "key": "plateletsDate",
+                    "label": "Platelets Date",
+                    "tableView": true,
+                    "input": true,
+                    "isNew": false
+                  }
+                ]
+              },
+              {
+                "components": [
+                  {
+                    "customConditional": "show = data['plateletsDate'] > 1",
+                    "type": "textfield",
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": null
+                    },
+                    "validate": {
+                      "customPrivate": false,
+                      "custom": "",
+                      "pattern": "",
+                      "maxLength": "",
+                      "minLength": "",
+                      "required": false
+                    },
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "defaultValue": "",
+                    "multiple": false,
+                    "suffix": "",
+                    "prefix": "",
+                    "placeholder": "If date is populated then display this field up to 3 numeric digits",
+                    "key": "plateletsResults",
+                    "label": "Platelets Results",
+                    "inputMask": "",
+                    "inputType": "text",
+                    "tableView": true,
+                    "input": true
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "components": [
+                  {
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": false
+                    },
+                    "type": "datetime",
+                    "validate": {
+                      "custom": "",
+                      "required": false
+                    },
+                    "persistent": true,
+                    "protected": false,
+                    "timePicker": {
+                      "arrowkeys": true,
+                      "mousewheel": true,
+                      "readonlyInput": false,
+                      "showMeridian": true,
+                      "minuteStep": 1,
+                      "hourStep": 1
+                    },
+                    "datePicker": {
+                      "datepickerMode": "day",
+                      "yearRange": "20",
+                      "maxMode": "year",
+                      "minMode": "day",
+                      "initDate": "",
+                      "startingDay": 0,
+                      "showWeeks": true
+                    },
+                    "datepickerMode": "day",
+                    "enableTime": true,
+                    "enableDate": true,
+                    "format": "mmddyyyy",
+                    "placeholder": "Free form date entry- do not display calendar",
+                    "key": "selfPregnancyTestDate",
+                    "label": "Self Pregnancy Test Date",
+                    "tableView": true,
+                    "input": true,
+                    "isNew": false
+                  },
+                  {
+                    "conditional": {
+                      "eq": "",
+                      "when": null,
+                      "show": null
+                    },
+                    "type": "select",
+                    "validate": {
+                      "required": false
+                    },
+                    "persistent": true,
+                    "unique": false,
+                    "protected": false,
+                    "multiple": false,
+                    "template": "<span>{{ item.label }}</span>",
+                    "authenticate": false,
+                    "filter": "",
+                    "refreshOn": "",
+                    "defaultValue": "",
+                    "valueProperty": "",
+                    "dataSrc": "values",
+                    "data": {
+                      "resource": "",
+                      "url": "",
+                      "json": "",
+                      "values": [
+                        {
+                          "label": "Positive",
+                          "value": "Positive"
+                        },
+                        {
+                          "label": "Negative",
+                          "value": "Negative"
+                        }
+                      ]
+                    },
+                    "placeholder": "",
+                    "key": "selfPregnancyTestresult",
+                    "label": "Self Pregnancy Test result",
+                    "tableView": true,
+                    "input": true
+                  }
+                ]
+              },
+              {
+                "components": []
+              }
+            ]
+          ],
+          "header": [],
+          "caption": "",
+          "striped": true,
+          "bordered": false,
+          "hover": false,
+          "condensed": false,
+          "type": "table",
+          "conditional": {
+            "show": "false",
+            "when": "noLabsDiagnosticAvailable",
+            "eq": "true"
+          }
+        },
+        {
+          "addAnother": "Add Other Lab/Diagnostic",
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": null
+          },
+          "type": "datagrid",
+          "persistent": true,
+          "protected": false,
+          "key": "otherLabsDiagnostics",
+          "label": "Other Labs/Diagnostics",
+          "tableView": true,
+          "components": [
+            {
+              "conditional": {
+                "eq": "",
+                "when": null,
+                "show": null
+              },
+              "hideLabel": true,
+              "type": "datetime",
+              "validate": {
+                "custom": "",
+                "required": false
+              },
+              "persistent": true,
+              "protected": false,
+              "timePicker": {
+                "arrowkeys": true,
+                "mousewheel": true,
+                "readonlyInput": false,
+                "showMeridian": true,
+                "minuteStep": 1,
+                "hourStep": 1
+              },
+              "datePicker": {
+                "datepickerMode": "day",
+                "yearRange": "20",
+                "maxMode": "year",
+                "minMode": "day",
+                "initDate": "",
+                "startingDay": 0,
+                "showWeeks": true
+              },
+              "datepickerMode": "day",
+              "enableTime": false,
+              "enableDate": true,
+              "format": "yyyy-MM-dd",
+              "placeholder": "",
+              "key": "date2",
+              "label": "Date",
+              "tableView": true,
+              "input": true
+            },
+            {
+              "hideLabel": true,
+              "type": "textfield",
+              "conditional": {
+                "eq": "",
+                "when": null,
+                "show": null
+              },
+              "validate": {
+                "customPrivate": false,
+                "custom": "",
+                "pattern": "",
+                "maxLength": "",
+                "minLength": "",
+                "required": false
+              },
+              "persistent": true,
+              "unique": false,
+              "protected": false,
+              "defaultValue": "",
+              "multiple": false,
+              "suffix": "",
+              "prefix": "",
+              "placeholder": "",
+              "key": "description",
+              "label": "Description",
+              "inputMask": "",
+              "inputType": "text",
+              "tableView": true,
+              "input": true
+            }
+          ],
+          "tree": true,
+          "input": true
+        }
+      ],
+      "type": "panel",
+      "conditional": {
+        "show": null,
+        "when": null,
+        "eq": ""
+      }
+    },
+    {
+      "type": "button",
+      "theme": "primary",
+      "disableOnInvalid": true,
+      "action": "submit",
+      "block": false,
+      "rightIcon": "",
+      "leftIcon": "",
+      "size": "md",
+      "key": "submit",
+      "tableView": false,
+      "label": "Submit",
+      "input": true
+    }
+  ],
+  "owner": "5716973123ae270100b94fc5",
+  "submissionAccess": [],
+  "access": [
+    {
+      "type": "read_all",
+      "roles": [
+        "5716984b23ae270100b94fcc",
+        "5716984b23ae270100b94fcd",
+        "5716984b23ae270100b94fce"
+      ]
+    }
+  ],
+  "tags": []
+}
