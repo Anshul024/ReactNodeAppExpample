@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { FormGroup, ControlLabel, FormControl, Col, Button } from 'react-bootstrap';
-class About extends React.Component {
+class AddProduct extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -117,7 +117,7 @@ class About extends React.Component {
     render() {
         return (
             <div>
-                <h2>About</h2>
+                <h2>Product Detail</h2>
                 <form id="formPoduct" ref="formPoduct" noValidate>
                     <Col xs={5} className="col-sm-offset-3">
                         <FormGroup controlId="formBasicText">
@@ -151,7 +151,8 @@ class About extends React.Component {
                             <ControlLabel>&nbsp;</ControlLabel>
                             {!this.props.match.params.id && <Button className="btn btn-primary" onClick={this.handleSubmit.bind(this)}>Save</Button>}
                             {this.props.match.params.id && <Button className="btn btn-primary" onClick={this.handleEdit.bind(this)}>Edit</Button>}
-                            <Button className="btn btn-warning" onClick={this.deleteProductDetailById.bind(this)}>Delete</Button>
+                            {this.props.match.params.id && <Button className="btn btn-warning" onClick={this.deleteProductDetailById.bind(this)}>Delete</Button>}
+                            <a className="btn btn-warning" href="/#/">Cancel</a>
                         </FormGroup>
                     </Col>
                 </form>
@@ -159,4 +160,4 @@ class About extends React.Component {
         );
     }
 }
-export default About;
+export default AddProduct;
