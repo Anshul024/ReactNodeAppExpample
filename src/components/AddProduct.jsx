@@ -10,18 +10,8 @@ class AddProduct extends React.Component {
             quantity: 0
         }
     }
-    handleSubmit() {
-
-    }
-    validation() {
-        // var r = $(ReactDOM.findDOMNode(this.refs.formPoduct)).validate();
-
-        // console.log(this.refs.formPoduct);
-        // console.log(r);
-    }
+  
     componentDidMount() {
-        this.validation();
-        console.log(this.props.match.params.id);
         if (this.props.match.params.id) {
             this.getProductDetailById();
         }
